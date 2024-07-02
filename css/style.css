@@ -29,7 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.8rem 5%;
   background-color: rgba(255, 228, 198, 0.6);
   border-bottom: 1px solid var(--primary);
   position: fixed;
@@ -87,6 +87,33 @@ body {
 #hamburger-menu {
   display: none;
 }
+
+/* Navbar Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 2%;
+  background-color: #fff;
+  width: 30rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
 
 /* Hero Section */
 .hero {
@@ -152,12 +179,14 @@ body {
 /* About Section */
 .about,
 .menu,
+.products,
 .contact {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
+.products h2,
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -166,6 +195,7 @@ body {
 
 .about h2 span,
 .menu h2 span,
+.products h2 span,
 .contact h2 span {
   color: #401b25;
 }
@@ -215,7 +245,7 @@ body {
 }
 
 .menu .row {
-  display: flex;
+  display: inline-block;
   flex-wrap: wrap;
   margin-top: 5rem;
   justify-content: center;
